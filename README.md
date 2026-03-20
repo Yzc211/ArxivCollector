@@ -24,15 +24,12 @@
 建议使用 Python 3.10+，并创建虚拟环境：
 
 ```bash
-# 创建虚拟环境
-python -m venv venv
+# 创建 conda 虚拟环境
+conda create -n ArxivCollect python=3.11 -y
 # 激活环境
-# Windows
-venv\Scripts\activate
-# Linux / Mac
-source venv/bin/activate
+conda activate ArxivCollect
 ```
-
+激活后，终端前面会显示 (ArxivCollect)，说明当前在该环境下操作。
 安装依赖：
 
 ```bash
@@ -42,7 +39,7 @@ pip install -r requirements.txt
 
 ## 配置说明
 
-编辑 `papercollect.py` 文件中的配置部分：
+编辑 `ArxivCollector.py` 文件中的配置部分：
 
 ```python
 # ---------------- 配置 ----------------
@@ -91,7 +88,7 @@ EMAIL_CONFIG = {
 直接在IDE中运行python文件或在虚拟环境中运行：
 
 ```bash
-python papercollect.py
+python ArxivCollector.py
 ```
 
 脚本会自动：
@@ -109,11 +106,11 @@ python papercollect.py
 ### Windows（任务计划程序）
 
 1. 打开“任务计划程序” → “创建基本任务”
-2. 设置名称，如 `arXivPaperUpdate`
+2. 设置名称，如 `arXivUpdate`
 3. 触发器选择“每天” → 高级设置“每 3 天重复一次”
 4. 操作选择“启动程序”
    * 程序/脚本：Python 可执行路径，例如 `C:\Users\username\miniconda3\python.exe`
-   * 参数：脚本路径，例如 `"D:\arxivpaper\ArxivCollector.py"`
+   * 参数：脚本路径，例如 `"D:\ArxivCollector.py"`
 5. 高级设置选择“以最高权限运行”，完成任务创建
 
 ### Linux / Mac（cron）
@@ -122,7 +119,7 @@ python papercollect.py
 2. 添加定时任务，每 3 天早上 9 点执行：
 
 ```cron
-0 9 */3 * * /usr/bin/python3 /home/user/arxivpaper/papercollect.py
+0 9 */3 * * /usr/bin/python3 /home/user/arxivpaper/ArxivCollector.py
 ```
 
 3. 保存并退出，cron 会自动执行。
