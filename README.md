@@ -38,16 +38,6 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-
-**requirements.txt 示例内容**：
-
-```
-arxiv
-pandas
-requests
-beautifulsoup4
-```
-
 ---
 
 ## 配置说明
