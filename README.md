@@ -113,7 +113,7 @@ python papercollect.py
 3. 触发器选择“每天” → 高级设置“每 3 天重复一次”
 4. 操作选择“启动程序”
    * 程序/脚本：Python 可执行路径，例如 `C:\Users\username\miniconda3\python.exe`
-   * 参数：脚本路径，例如 `"D:\arxivpaper\papercollect.py"`
+   * 参数：脚本路径，例如 `"D:\arxivpaper\ArxivCollector.py"`
 5. 高级设置选择“以最高权限运行”，完成任务创建
 
 ### Linux / Mac（cron）
